@@ -8,14 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" href="{{ asset('admin/img/favicon.png') }}"/>
     <link rel="icon" type="image/png" href="{{ asset('admin/img/favicon.png') }}" />
-    <title>{% block title %}{{ front_main_title }}{% endblock %}</title>
+    <title>{% block title %}{{ front_main_title | capitalize }}{% endblock %}</title>
     {{ encore_entry_link_tags('app') }}
 </head>
-<body>
+<body class="my-body" data-spy="scroll" data-target="#navbar" data-offset="200">
 <header>
     <div class="navbar navbar-dark bg-brand-primary shadow-sm">
         <a href="{{ path('app_front_homepage') }}" class="navbar-brand d-flex align-items-center">
-            <img height="70" src="{{ asset('build/logo.jpg') }}" alt="{{ front_main_title }} logo" class="d-inline-block align-top">
+            <img height="70" src="{{ asset('build/logo.jpg') }}" alt="{{ front_main_title | capitalize }} logo" class="d-inline-block align-top">
         </a>
     </div>
 </header>

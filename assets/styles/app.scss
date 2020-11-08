@@ -1,7 +1,54 @@
-// customize some Bootstrap variables
-$primary: darken(#428bca, 20%);
+// colors
 
-// the ~ allows you to reference things in node_modules
+// variables
+$pb-custom-navbar-height: 90px;
+$navbar-height: $pb-custom-navbar-height;
+
+// customs
+body {
+  padding-top: $pb-custom-navbar-height;
+}
+
+// fonts
+$icon-font-path: "/build/fonts/";
+$fa-font-path:   "/build/fonts";
+$enable-responsive-font-sizes: true;
+
+// colors
+$brand-primary-color: #921C56;
+$brand-secondary-color: #F7EAD8;
+$link-color: $brand-primary-color;
+
+// elements
+.text-brand-primary {
+  color: $brand-primary-color !important;
+}
+
+.text-brand-secondary {
+  color: $brand-secondary-color !important;
+}
+
+.bg-brand-primary {
+  background-color: $brand-primary-color !important;
+}
+
+.bg-brand-secondary {
+  background-color: $brand-secondary-color !important;
+}
+
+footer.footer {
+  color: white !important;
+  div.container {
+    ul.list-inline {
+      li.list-inline-item {
+        a {
+          color: white !important;
+        }
+      }
+    }
+  }
+}
+
+// imports
 @import "~bootstrap/scss/bootstrap";
-@import "~font-awesome/less/font-awesome.less";
-
+@import "~font-awesome/scss/font-awesome";

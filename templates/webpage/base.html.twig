@@ -6,19 +6,36 @@
     <meta name="author" content="https://www.flux.cat">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="apple-touch-icon" href="{{ asset('admin/img/favicon.png') }}"/>
-    <link rel="icon" type="image/png" href="{{ asset('admin/img/favicon.png') }}" />
+    <link rel="apple-touch-icon" href="{{ asset('build/favicon.png') }}"/>
+    <link rel="icon" type="image/png" href="{{ asset('build/favicon.png') }}" />
     <title>{% block title %}{{ front_main_title | capitalize }}{% endblock %}</title>
     {{ encore_entry_link_tags('app') }}
 </head>
-<body class="my-body" data-spy="scroll" data-target="#navbar" data-offset="200">
-<header>
-    <div class="navbar navbar-dark bg-brand-primary shadow-sm">
-        <a href="{{ path('app_front_homepage') }}" class="navbar-brand d-flex align-items-center">
-            <img height="70" src="{{ asset('build/logo.jpg') }}" alt="{{ front_main_title | capitalize }} logo" class="d-inline-block align-top">
-        </a>
+<body class="my-body" data-spy="scroll" data-target="#navbarSupportedContent" data-offset="200">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+    <a href="{{ path('app_front_homepage') }}" class="navbar-brand">
+        <img height="70" src="{{ asset('build/logo.jpg') }}" alt="{{ front_main_title | capitalize }} logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Metodología</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Servicios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Trayectoria</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contacto</a>
+            </li>
+        </ul>
     </div>
-</header>
+</nav>
 {% if app.session.flashbag.peekAll | length > 0 %}
     <div class="container">
         {% for type, messages in app.session.flashbag.all %}

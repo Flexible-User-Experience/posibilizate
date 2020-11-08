@@ -1,13 +1,14 @@
 // colors
+$green-dark:  #7DC058;
+$green-pure:  #C6DB70;
+$green:       #BCDBE5;
+$green-light: #E6EEC3;
 
 // variables
 $pb-custom-navbar-height: 90px;
 $navbar-height: $pb-custom-navbar-height;
 
-// customs
-body {
-  padding-top: $pb-custom-navbar-height;
-}
+
 
 // fonts
 $icon-font-path: "/build/fonts/";
@@ -52,3 +53,17 @@ footer.footer {
 // imports
 @import "~bootstrap/scss/bootstrap";
 @import "~font-awesome/scss/font-awesome";
+
+// customs
+.c-green-dark  { color: $green-dark; }
+.c-green-pure  { color: $green-pure; }
+.c-green       { color: $green; }
+.c-green-light { color: $green-light; }
+.bg-c-green-dark  { background-color: $green-dark; }
+.bg-c-green-pure  { background-color: $green-pure; }
+.bg-c-green       { background-color: $green; }
+.bg-c-green-light { background-color: $green-light; }
+
+body {
+  padding-top: $pb-custom-navbar-height;
+}

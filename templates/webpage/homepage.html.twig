@@ -1,0 +1,39 @@
+{% extends "webpage/base.html.twig" %}
+
+{% block body %}
+    <div class="jumbotron jumbotron-fluid bg-primary text-white mb-0">
+        <div class="container">
+            <h2 class="display-4">Rock and Camera Roll</h2>
+            <hr class="my-4">
+            <p class="lead">Turn your smartphone into an almost true analog camera. Camera rolls are come back, how many printed photos do you want to get?</p>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid bg-brand-secondary text-brand-primary mb-0">
+        <div class="container">
+            <h2 class="display-4">Enjoy shooting again</h2>
+            <hr class="my-4">
+            <p class="lead">Think before shot, enjoy your environment and your mates. Take your time because you'll never see the picture in your display after shot. Cool?</p>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid bg-primary text-white mb-0">
+        <div class="container">
+            <h2 class="display-4">Simply secure</h2>
+            <hr class="my-4">
+            <p class="lead">We believe in privacy so your images will be end-to-end encrypted and destroyed after print. Promise!</p>
+        </div>
+    </div>
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-12">
+                <h3 id="contact-form">Contact us</h3>
+                <h5 class="text-muted">Wow! This sounds really interesting, I'm interested in try this amazing service.</h5>
+                <p>
+                    So take my data, be careful, don't share it with anybody and please, tell me something as soon as possible.
+                </p>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                {{ form(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

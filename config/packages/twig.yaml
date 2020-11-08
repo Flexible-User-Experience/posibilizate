@@ -3,3 +3,8 @@ twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
     exception_controller: null
+    form_themes:
+        - 'bootstrap_4_layout.html.twig'
+        - '@EWZRecaptcha/Form/ewz_recaptcha_widget.html.twig'
+    globals:
+      front_main_title: '%front_main_title%'

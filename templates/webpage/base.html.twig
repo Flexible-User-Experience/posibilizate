@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" href="{{ asset('build/favicon.png') }}"/>
     <link rel="icon" type="image/png" href="{{ asset('build/favicon.png') }}" />
-    <title>{% block title %}{{ front_main_title | capitalize }} · Asesoría y Consultoría Psicológica{% endblock %}</title>
+    <title>{{ front_main_title | capitalize }}{% block title %} · Asesoría y Consultoría Psicológica{% endblock %}</title>
     {{ encore_entry_link_tags('app') }}
 </head>
 <body class="my-body" data-spy="scroll" data-target="#navbarSupportedContent" data-offset="150">

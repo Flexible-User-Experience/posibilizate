@@ -1,9 +1,14 @@
 {% extends "webpage/base.html.twig" %}
 
 {% block body %}
+    <div class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/home.jpg') | imagine_filter('2400xY') }}');background-size:cover;">
+        <div class="container p-5">
+            <h1 class="text-white">{{ front_main_title | capitalize }}</h1>
+            <h2 class="text-white">asesoría y consultoría psicológica</h2>
+        </div>
+    </div>
     <div class="jumbotron jumbotron-fluid bg-white mb-0">
         <div class="container">
-            <img src="{{ asset('build/home.jpg') }}" class="img-fluid mb-3" alt="{{ front_main_title | capitalize }} foto principal">
             <p class="lead mb-0">Posibilízate es un servicio de atención psicológica donde podrás expresar, ordenar y comprender aquello que te sucede y transformarlo en aprendizajes que te permitan alcanzar un mayor grado de bienestar. Desarrollarás herramientas y estrategias que te permitan detectar y  gestionar las situaciones de dificultad o conflicto así como descubrir las capacidades que hay en ti para ponerlas en valor.</p>
         </div>
     </div>
@@ -21,7 +26,7 @@
             <blockquote class="blockquote text-center">
                 <p>Te propongo dar hoy el primer paso.</p>
             </blockquote>
-            <img src="{{ asset('build/step.jpg') }}" class="img-fluid mx-auto d-block" alt="{{ front_main_title | capitalize }} foto principal">
+            <img src="{{ asset('build/step.jpg') | imagine_filter('600xY') }}" class="img-fluid mx-auto d-block" alt="{{ front_main_title | capitalize }} foto principal">
         </div>
     </div>
     {#    <div class="jumbotron jumbotron-fluid bg-brand-secondary text-brand-primary mb-0">#}

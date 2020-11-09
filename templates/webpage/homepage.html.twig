@@ -4,7 +4,7 @@
     <div class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/home.jpg') | imagine_filter('2400xY') }}');background-size:cover;">
         <div class="container p-5">
             <h1 class="text-white">{{ front_main_title | capitalize }}</h1>
-            <h2 class="text-white">asesoría y consultoría psicológica</h2>
+            <h2 class="text-white mb-0">asesoría y consultoría psicológica</h2>
         </div>
     </div>
     <div class="jumbotron jumbotron-fluid bg-white mb-0">
@@ -43,7 +43,44 @@
 {#            <p class="lead">We believe in privacy so your images will be end-to-end encrypted and destroyed after print. Promise!</p>#}
 {#        </div>#}
 {#    </div>#}
-
+    <div class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/metodology.jpg') | imagine_filter('2400xY') }}');background-size:cover;">
+        <div id="metodology" class="container p-5">
+            <h1 class="text-white mb-0">Metodologia</h1>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid bg-white mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card border-success">
+                        <img src="{{ asset('build/expression.jpg') | imagine_filter('600xY') }}" class="card-img-top" alt="Yarn alt">
+                        <div class="card-body">
+                            <h5 class="card-title">Expresión y conciencia</h5>
+                            <p class="card-text mb-0">La expresión de los pensamientos, sentimientos y emociones es el primer paso para tomar conciencia y poder poner nombre a aquello que te está pasando.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card border-success">
+                        <img src="{{ asset('build/yarn.jpg') | imagine_filter('600xY') }}" class="card-img-top" alt="Yarn alt">
+                        <div class="card-body">
+                            <h5 class="card-title">Comprensión y orden</h5>
+                            <p class="card-text mb-0">Una vez identificados los elementos clave, el foco se traslada en comprender de manera integral y profunda aquello que genera sufrimiento, así como aprender a ordenar  los pensamientos y sentimientos. Ello, además de aliviar la situación presente, permite en muchas ocasiones trabajar en clave de prevención futura.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card border-success">
+                        <img src="{{ asset('build/bulb.jpg') | imagine_filter('600xY') }}" class="card-img-top" alt="Yarn alt">
+                        <div class="card-body">
+                            <h5 class="card-title">Plan de acción</h5>
+                            <p class="card-text mb-0"><strong>Si tenemos un "por qué", siempre encontraremos un "cómo".</strong> Todo proceso terapéutico supone una metamorfosis personal. Por ello, es probable que habiendo establecido claridad, puedan aparecer nuevos horizontes hacia los que dirigir tus pasos.  Te acompaño a dibujar una ruta y te animo a que consigas aquello que te hayas propuesto. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-12">

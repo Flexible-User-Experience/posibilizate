@@ -14,9 +14,23 @@ $fa-font-path:   "/build/fonts";
 $enable-responsive-font-sizes: true;
 
 // colors
-$brand-primary-color: #921C56;
-$brand-secondary-color: #F7EAD8;
+$brand-primary-color: $green-dark;
+$brand-secondary-color: $green-light;
 $link-color: $brand-primary-color;
+
+// imports
+@import "~bootstrap/scss/bootstrap";
+@import "~font-awesome/scss/font-awesome";
+
+// customs
+.c-green-dark  { color: $green-dark; }
+.c-green-pure  { color: $green-pure; }
+.c-green       { color: $green; }
+.c-green-light { color: $green-light; }
+.bg-c-green-dark  { background-color: $green-dark; }
+.bg-c-green-pure  { background-color: $green-pure; }
+.bg-c-green       { background-color: $green; }
+.bg-c-green-light { background-color: $green-light; }
 
 // elements
 .text-brand-primary {
@@ -35,6 +49,14 @@ $link-color: $brand-primary-color;
   background-color: $brand-secondary-color !important;
 }
 
+body {
+  padding-top: $pb-custom-navbar-height;
+}
+
+.navbar.with-border-bottom {
+  border-bottom: solid 1px $green-dark;
+}
+
 footer.footer {
   color: white !important;
   div.container {
@@ -46,26 +68,4 @@ footer.footer {
       }
     }
   }
-}
-
-// imports
-@import "~bootstrap/scss/bootstrap";
-@import "~font-awesome/scss/font-awesome";
-
-// customs
-.c-green-dark  { color: $green-dark; }
-.c-green-pure  { color: $green-pure; }
-.c-green       { color: $green; }
-.c-green-light { color: $green-light; }
-.bg-c-green-dark  { background-color: $green-dark; }
-.bg-c-green-pure  { background-color: $green-pure; }
-.bg-c-green       { background-color: $green; }
-.bg-c-green-light { background-color: $green-light; }
-
-body {
-  padding-top: $pb-custom-navbar-height;
-}
-
-.navbar.with-border-bottom {
-  border-bottom: solid 1px $green-dark;
 }

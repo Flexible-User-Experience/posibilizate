@@ -2,7 +2,7 @@
 
 {% block body %}
     <div class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/home.jpg') | imagine_filter('2400xY') }}');background-size:cover;">
-        <div class="container p-5">
+        <div id="home" class="container p-5">
             <h1 class="text-white">{{ front_main_title | capitalize }}</h1>
             <h2 class="text-white mb-0">asesoría y consultoría psicológica</h2>
         </div>
@@ -17,7 +17,7 @@
             <blockquote class="blockquote text-center">
                 <p>Te ayudo a que potencies tus capacidades y habilidades</p>
             </blockquote>
-            <p class="lead mb-0"><strong>Para lograr un mayor grado de</strong>: autonconocimiento, inteligencia y autonomía emocional, confianza en ti mism@, autoestima, creatividad, resiliencia, motivación, y <u>bienestar</u></p>
+            <p class="lead mb-0"><strong>Para lograr un mayor grado de</strong>: autonconocimiento, inteligencia y autonomía emocional, confianza en ti mism@, autoestima, creatividad, resiliencia, motivación y <u>bienestar</u></p>
         </div>
     </div>
     <div class="jumbotron jumbotron-fluid bg-white mb-0">
@@ -29,20 +29,6 @@
             <img src="{{ asset('build/step.jpg') | imagine_filter('600xY') }}" class="img-fluid mx-auto d-block" alt="{{ front_main_title | capitalize }} foto principal">
         </div>
     </div>
-    {#    <div class="jumbotron jumbotron-fluid bg-brand-secondary text-brand-primary mb-0">#}
-{#        <div class="container">#}
-{#            <h2 class="display-4">Enjoy shooting again</h2>#}
-{#            <hr class="my-4">#}
-{#            <p class="lead">Think before shot, enjoy your environment and your mates. Take your time because you'll never see the picture in your display after shot. Cool?</p>#}
-{#        </div>#}
-{#    </div>#}
-{#    <div class="jumbotron jumbotron-fluid bg-primary text-white mb-0">#}
-{#        <div class="container">#}
-{#            <h2 class="display-4">Simply secure</h2>#}
-{#            <hr class="my-4">#}
-{#            <p class="lead">We believe in privacy so your images will be end-to-end encrypted and destroyed after print. Promise!</p>#}
-{#        </div>#}
-{#    </div>#}
     <div class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/metodology.jpg') | imagine_filter('2400xY') }}');background-size:cover;">
         <div id="metodology" class="container p-5">
             <h1 class="text-white mb-0">Metodologia</h1>
@@ -52,7 +38,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
-                    <div class="card border-success">
+                    <div class="card border-success mb-4">
                         <img src="{{ asset('build/expression.jpg') | imagine_filter('600xY') }}" class="card-img-top" alt="Yarn alt">
                         <div class="card-body">
                             <h5 class="card-title">Expresión y conciencia</h5>
@@ -61,7 +47,7 @@
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <div class="card border-success">
+                    <div class="card border-success mb-4">
                         <img src="{{ asset('build/yarn.jpg') | imagine_filter('600xY') }}" class="card-img-top" alt="Yarn alt">
                         <div class="card-body">
                             <h5 class="card-title">Comprensión y orden</h5>
@@ -70,7 +56,7 @@
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <div class="card border-success">
+                    <div class="card border-success mb-4">
                         <img src="{{ asset('build/bulb.jpg') | imagine_filter('600xY') }}" class="card-img-top" alt="Yarn alt">
                         <div class="card-body">
                             <h5 class="card-title">Plan de acción</h5>
@@ -79,8 +65,26 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col">
+                    <h3 class="mb-4">Elementos clave</h3>
+                    <p class="lead">
+                        Expresión e identificación de pensamientos y creencias, escucha activa, atención plena, reflexión crítica, metáforas, preguntas fuerza, estrategias de regulación, gestión del miedo y lo incierto, profundidad y pragmatismo, toma de decisiones, reformulación positiva, comunicación asertiva, creatividad en la búsqueda de alternativas, propósito, plan de acción, potencial y capacidad, objetivos vitales.
+                    </p>
+                    <p>
+                        El asesoramiento psicológico es un proceso en el que tu te conviertes en protagonista activ@. No se trata de recibir consejos, sino de estar dispuest@ a activar el potencial que hay en ti. Estableceremos un vínculo en el que, a través de la <strong>expresión</strong> de aquello que te abruma irás desarrollando estrategias que te permitirán identificar elementos clave del conflicto y poderlos atender, comprender y reformularlos para que puedas salir fortalecid@.
+                    </p>
+                    <p>
+                        Cada caso es único, pero a nivel general, en las primeras sesiones se trabaja sobre la <strong>capacidad de tomar conciencia</strong> aquellas cuestiones que están interfiriendo en el desarrollo pleno de tu persona. En muchas ocasiones, este <em>"darse cuenta"</em> es de por si un elemento liberador. Pero no suficiente; además de saber qué nos pasa, hemos de ordenarlo y comprenderlo para poderlo transcender.
+                    </p>
+                    <p class="mb-0">
+                        Comprender se basa en la reflexión y el autonocimiento, en <strong>descubrir el sentido profundo de aquello que está pasando</strong>. Aquí entra en juego el desarrollo de una <strong>actitud resiliente</strong> que facilitará desarrollar la capacidad de elección del camino que quieres seguir y un aprendizaje integrado.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
+
     <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-12">

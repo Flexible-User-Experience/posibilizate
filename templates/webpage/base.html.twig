@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="author" content="https://www.flux.cat">
-    <meta name="description" content="">
+    <meta name="description" content="{{ front_main_title | capitalize }} · Asesoría y Consultoría Psicológica">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" href="{{ asset('build/favicon.png') }}"/>
     <link rel="icon" type="image/png" href="{{ asset('build/favicon.png') }}" />
-    <title>{% block title %}{{ front_main_title | capitalize }}{% endblock %}</title>
+    <title>{% block title %}{{ front_main_title | capitalize }} · Asesoría y Consultoría Psicológica{% endblock %}</title>
     {{ encore_entry_link_tags('app') }}
 </head>
 <body class="my-body" data-spy="scroll" data-target="#navbarSupportedContent" data-offset="150">
@@ -62,6 +62,9 @@
     <div class="container">
         <div class="row">
             <div class="col-3">
+                <strong>Marta Iglesias Ojeda</strong><br>
+                <i class="fas fa-phone-square"></i> <a href="tel:+34655768647">655 768 647</a><br>
+                <i class="fas fa-envelope-square"></i> <a href="mailto:info@posibilizate.com">info@posibilizate.com</a><br>
                 &copy; {{ 'now' | date('Y') }}
             </div>
             <div class="col-9 text-right">

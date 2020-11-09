@@ -10,7 +10,7 @@ $navbar-height: $pb-custom-navbar-height;
 
 // fonts
 $icon-font-path: "/build/fonts/";
-$fa-font-path:   "/build/fonts";
+$fa-font-path:   "~@fortawesome/fontawesome-free/webfonts";
 $enable-responsive-font-sizes: true;
 
 // colors
@@ -19,8 +19,9 @@ $brand-secondary-color: $green-light;
 $link-color: $brand-primary-color;
 
 // imports
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~bootstrap/scss/bootstrap";
-@import "~font-awesome/scss/font-awesome";
 
 // customs
 .c-green-dark  { color: $green-dark; }

@@ -20,23 +20,25 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#home">{{ front_main_title | capitalize }}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#metodology">Metodología</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#services">Servicios</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#career">Trayectoria</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#contact">Contacto</a>
-            </li>
-        </ul>
+        {% block menu %}
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">{{ front_main_title | capitalize }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#metodology">Metodología</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#career">Trayectoria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link pr-0" href="#contact">Contacto</a>
+                </li>
+            </ul>
+        {% endblock %}
     </div>
 </nav>
 {% if app.session.flashbag.peekAll | length > 0 %}
@@ -69,7 +71,7 @@
             <div class="col-9 text-right">
                 <ul class="list-inline">
                     <li class="list-inline-item">
-                        <a href="#">política de privacidad</a>
+                        <a href="{{ path('app_front_privacy_policy') }}">política de privacidad</a>
                     </li>
                     <li class="list-inline-item">·</li>
                     <li class="list-inline-item">

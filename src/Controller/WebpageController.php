@@ -37,4 +37,11 @@ class WebpageController extends AbstractController
       );
   }
 
+  /**
+   * @Route("/politica-de-privacidad", name="app_front_privacy_policy")
+   */
+  public function privacyPolicyAction()
+  {
+      return $this->render('webpage/privacy_policy.html.twig');
+  }
 }

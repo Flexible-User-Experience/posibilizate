@@ -152,22 +152,24 @@
             <h1 class="text-white mb-0">Trayectoria</h1>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <img src="{{ asset('build/me.jpg') | imagine_filter('1200xY') }}" class="img-fluid mb-4" alt="Marta Iglesias psicóloga">
+    <div class="jumbotron jumbotron-fluid bg-white mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="{{ asset('build/me.jpg') | imagine_filter('1200xY') }}" class="img-fluid mb-4" alt="Marta Iglesias psicóloga">
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <p>Soy Marta Iglesias, Licenciada en <strong>Psicología</strong> y colegiada número <strong>22258</strong>.</p>
-                <p>En el tercer curso de la carrera escuché por primera vez la palabra <strong>emoción</strong> dentro del aula hecho que me impactó y motivó a realizar el <strong>Máster en educación emocional y bienestar</strong> (Univesitat de Barcelona, 2011) para aprender y profundizar sobre ella.</p>
-                <p class="mb-4">Ambos estudios me proporcionaron las bases para el acompañamiento de procesos psicológicos mediante el conocimiento y gestión de las emociones como eje central de la praxis.</p>
-            </div>
-            <div class="col">
-                <p>De entre las múltiples opciones de especialización terapéutica, me decanté por la <strong>Terapia Transpersonal</strong> (Escuela Española de Desarrollo Transpersonal, 2015) ya que vi a través de ella la posibilidad de facilitar la integración de procesos vitales y existenciales, con las áreas bio-psico-social de la persona.</p>
-                <p>Recientemente he finalizado un <strong>Máster en orientación educativa</strong> (UNIR, 2020) que me ha permitido profundizar en el desarrollo de técnicas de inclusión e innovación metodológica en el ámbito educativo.</p>
-                <p class="mb-4">He complementado esta base mediante la adquisición de <strong>herramientas específicas</strong> que me permitan ampliar el alcance del acompañamiento a la diversidad de situaciones de conflicto que las personas puedan presentar.</p>
+            <div class="row">
+                <div class="col">
+                    <p>Soy Marta Iglesias, Licenciada en <strong>Psicología</strong> y colegiada número <strong>22258</strong>.</p>
+                    <p>En el tercer curso de la carrera escuché por primera vez la palabra <strong>emoción</strong> dentro del aula hecho que me impactó y motivó a realizar el <strong>Máster en educación emocional y bienestar</strong> (Univesitat de Barcelona, 2011) para aprender y profundizar sobre ella.</p>
+                    <p class="mb-0">Ambos estudios me proporcionaron las bases para el acompañamiento de procesos psicológicos mediante el conocimiento y gestión de las emociones como eje central de la praxis.</p>
+                </div>
+                <div class="col">
+                    <p>De entre las múltiples opciones de especialización terapéutica, me decanté por la <strong>Terapia Transpersonal</strong> (Escuela Española de Desarrollo Transpersonal, 2015) ya que vi a través de ella la posibilidad de facilitar la integración de procesos vitales y existenciales, con las áreas bio-psico-social de la persona.</p>
+                    <p>Recientemente he finalizado un <strong>Máster en orientación educativa</strong> (UNIR, 2020) que me ha permitido profundizar en el desarrollo de técnicas de inclusión e innovación metodológica en el ámbito educativo.</p>
+                    <p class="mb-0">He complementado esta base mediante la adquisición de <strong>herramientas específicas</strong> que me permitan ampliar el alcance del acompañamiento a la diversidad de situaciones de conflicto que las personas puedan presentar.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -176,23 +178,34 @@
             <p class="lead mb-0"><strong>Me he formado en coaching, mediación en drogodependencias, intervención psicopedagógica en entornos sociales y familiares, procesos de duelo, dificultades en el aprendizaje, desarrollo de competencias transversales, pensamiento crítico y actitud creativa, entre otras.</strong></p>
         </div>
     </div>
-    <div id="contact" class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/contact.jpg') | imagine_filter('2400xY') }}');background-size:cover;">
-        <div class="container p-5">
-            <h1 class="text-black mb-0">Contacto</h1>
+    <div class="jumbotron jumbotron-fluid bg-white mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>He dedicado mi vida profesional al acompañamiento de personas a través de todas las etapas vitales. Educadora social, psicóloga, orientadora, formadora, gestora de procesos y proyectos de planificación estratégica, son algunas de las categorías profesionales que he desarrollado a lo largo de los últimos <strong>15 años</strong>.</p>
+                    <p class="mb-0">A su vez he formado parte de dos grupos de investigación de psicología social y del pensamiento así he colaborado junto con la funeraria Albia y Artmemori en la redacción de una guía para el acompañamiento en procesos de duelo: <em>"Mi Cuaderno de Ayuda al Duelo"</em>.</p>
+                </div>
+                <div class="col">
+                    <p>A nivel personal puedo decirte que <strong>he sido adicta al cambio y a la intensidad del límite</strong>. Ello me ha permitido experimentar además de dolor, múltiples situaciones de aprendizaje que hoy amplían mi base de comprensión y empatía.</p>
+                    <p class="mb-0">He realizado un proceso de autoconocimiento y autogestión de las emociones que hoy me permiten ser una persona consciente, eficiente y ecuánime sin perder por ello la esencia de mi personalidad.</p>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="container mt-5 mb-5">
-        <div class="row">
-            <div class="col-12">
-                <h3 id="contact-form">Contact us</h3>
-                <h5 class="text-muted">Wow! This sounds really interesting, I'm interested in try this amazing service.</h5>
-                <p>
-                    So take my data, be careful, don't share it with anybody and please, tell me something as soon as possible.
-                </p>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                {{ form(form) }}
+    <div id="contact" class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/metodology.jpg') | imagine_filter('2400xY') }}');background-size:cover;">
+        <div class="container p-5">
+            <h1 class="text-white mb-0">Contacto</h1>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid bg-white mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="{{ asset('build/contact.jpg') | imagine_filter('1200xY') }}" class="img-fluid mb-4" alt="Contacto">
+                </div>
+                <div class="col">
+                    {{ form(form) }}
+                </div>
             </div>
         </div>
     </div>

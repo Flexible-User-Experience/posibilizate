@@ -9,4 +9,5 @@ twig:
     globals:
         google_analytics_enabled: '%google_analytics_enabled%'
         google_analytics_code: '%google_analytics_code%'
+        mailer_destination: '%mailer_destination%'
         front_main_title: '%front_main_title%'

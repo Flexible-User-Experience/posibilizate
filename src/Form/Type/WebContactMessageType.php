@@ -74,7 +74,7 @@ class WebContactMessageType extends AbstractType
                 [
                     'required' => true,
                     'mapped' => false,
-                    'label' => 'Accept Terms and Conditions',
+                    'label' => 'Acepto las condiciones legales',
                 ]
             )
             ->add(

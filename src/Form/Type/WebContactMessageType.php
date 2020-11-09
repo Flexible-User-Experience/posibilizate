@@ -15,11 +15,6 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints as Assert;
 
-/**
- * Class ContactMessageType.
- *
- * @category FormType
- */
 class WebContactMessageType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void

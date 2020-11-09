@@ -1,11 +1,7 @@
-# This file is the entry point to configure your own services.
-# Files in the packages/ subdirectory configure your dependencies.
-
-# Put parameters here that don't need to change on each machine where the app is deployed
-# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    google_recaptcha_site_key: '%env(GOOGLE_RECAPTCHA_SITE_KEY)%'
-    front_main_title: '%env(PROJECT_WEB_TITLE)%'
+    locale: '%env(string:DEFAULT_LOCALE)%'
+    google_recaptcha_site_key: '%env(string:GOOGLE_RECAPTCHA_SITE_KEY)%'
+    front_main_title: '%env(string:PROJECT_WEB_TITLE)%'
 
 services:
     # default configuration for services in *this* file

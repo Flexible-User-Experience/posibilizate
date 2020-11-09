@@ -7,4 +7,6 @@ twig:
         - 'bootstrap_4_layout.html.twig'
         - '@EWZRecaptcha/Form/ewz_recaptcha_widget.html.twig'
     globals:
-      front_main_title: '%front_main_title%'
+        google_analytics_enabled: '%google_analytics_enabled%'
+        google_analytics_code: '%google_analytics_code%'
+        front_main_title: '%front_main_title%'

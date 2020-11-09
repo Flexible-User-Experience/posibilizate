@@ -2,6 +2,8 @@ parameters:
     locale: '%env(string:DEFAULT_LOCALE)%'
     google_recaptcha_site_key: '%env(string:GOOGLE_RECAPTCHA_SITE_KEY)%'
     front_main_title: '%env(string:PROJECT_WEB_TITLE)%'
+    google_analytics_enabled: '%env(bool:GOOGLE_ANALYTICS_IS_ENABLED)%'
+    google_analytics_code: '%env(string:GOOGLE_ANALYTICS_ACCOUNT)%'
     mailer_destination: '%env(string:MAILER_DESTINATION)%'
     delivery_dev_address: '%env(string:DEV_DELIVERY_ADDRESS)%'
 

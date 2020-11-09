@@ -1,10 +1,10 @@
 {% extends "webpage/base.html.twig" %}
 
 {% block body %}
-    <div class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/home.jpg') | imagine_filter('2400xY') }}');background-size:cover;">
-        <div id="home" class="container p-5">
-            <h1 class="text-white">{{ front_main_title | capitalize }}</h1>
-            <h2 class="text-white mb-0">asesoría y consultoría psicológica</h2>
+    <div id="home" class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/home.png') | imagine_filter('2400xY') }}');background-size:cover;">
+        <div class="container p-5">
+            <h1 class="display-1 text-white">{{ front_main_title | capitalize }}</h1>
+            <h2 class="display-4 text-white mb-0">Asesoría y Consultoría Psicológica</h2>
         </div>
     </div>
     <div class="jumbotron jumbotron-fluid bg-white mb-0">
@@ -14,23 +14,31 @@
     </div>
     <div class="jumbotron jumbotron-fluid bg-c-green-light text-black mb-0">
         <div class="container">
-            <blockquote class="blockquote text-center">
-                <p>Te ayudo a que potencies tus capacidades y habilidades</p>
-            </blockquote>
-            <p class="lead mb-0"><strong>Para lograr un mayor grado de</strong>: autonconocimiento, inteligencia y autonomía emocional, confianza en ti mism@, autoestima, creatividad, resiliencia, motivación y <u>bienestar</u></p>
+            <h3 class="mb-4">Te ayudo a que potencies tus capacidades y habilidades</h3>
+            <p class="lead mb-0"><strong>Para lograr un mayor grado de</strong> autonconocimiento, inteligencia y autonomía emocional, confianza en ti mism@, autoestima, creatividad, resiliencia, motivación y <u>bienestar</u>.</p>
         </div>
     </div>
     <div class="jumbotron jumbotron-fluid bg-white mb-0">
         <div class="container">
-            <p class="lead">Pongo a tu disposición un conjunto de instrumentos y metodologías basadas en las siguientes corrientes: psicología sistémica y humanista, terapia transpersonal, logoterapia, existencialismo, coaching, inteligencia emocional y PNL. Además de herramientas específicas para la gestión de <strong>conflictos</strong>, procesos de duelo y crisis vitales.</p>
-            <blockquote class="blockquote text-center">
-                <p>Te propongo dar hoy el primer paso.</p>
-            </blockquote>
-            <img src="{{ asset('build/step.jpg') | imagine_filter('600xY') }}" class="img-fluid mx-auto d-block" alt="{{ front_main_title | capitalize }} foto principal">
+            <div class="row">
+                <div class="col">
+                    <p class="lead">Pongo a tu disposición un conjunto de instrumentos y metodologías basadas en las siguientes corrientes: psicología sistémica y humanista, terapia transpersonal, logoterapia, existencialismo, coaching, inteligencia emocional y PNL. Además de herramientas específicas para la gestión de <strong>conflictos</strong>, procesos de duelo y crisis vitales.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-5">
+                    <div class="card text-center c-green-dark border-light">
+                        <img src="{{ asset('build/step.jpg') | imagine_filter('600xY') }}" class="card-img" alt="{{ front_main_title | capitalize }} foto principal">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title p-3" style="background-color:rgba(255, 255, 255, 0.85);">Te propongo dar hoy el primer paso</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/metodology.jpg') | imagine_filter('2400xY') }}');background-size:cover;">
-        <div id="metodology" class="container p-5">
+    <div id="metodology" class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/metodology.jpg') | imagine_filter('2400xY') }}');background-size:cover;">
+        <div class="container p-5">
             <h1 class="text-white mb-0">Metodologia</h1>
         </div>
     </div>
@@ -84,8 +92,8 @@
             </div>
         </div>
     </div>
-    <div class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/metodology.jpg') | imagine_filter('2400xY') }}');background-size:cover;">
-        <div id="services" class="container p-5">
+    <div id="services" class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/metodology.jpg') | imagine_filter('2400xY') }}');background-size:cover;">
+        <div class="container p-5">
             <h1 class="text-white mb-0">Servicios</h1>
         </div>
     </div>
@@ -139,7 +147,40 @@
             </div>
         </div>
     </div>
-
+    <div id="career" class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/metodology.jpg') | imagine_filter('2400xY') }}');background-size:cover;">
+        <div class="container p-5">
+            <h1 class="text-white mb-0">Trayectoria</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="{{ asset('build/me.jpg') | imagine_filter('1200xY') }}" class="img-fluid mb-4" alt="Marta Iglesias psicóloga">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>Soy Marta Iglesias, Licenciada en <strong>Psicología</strong> y colegiada número <strong>22258</strong>.</p>
+                <p>En el tercer curso de la carrera escuché por primera vez la palabra <strong>emoción</strong> dentro del aula hecho que me impactó y motivó a realizar el <strong>Máster en educación emocional y bienestar</strong> (Univesitat de Barcelona, 2011) para aprender y profundizar sobre ella.</p>
+                <p class="mb-4">Ambos estudios me proporcionaron las bases para el acompañamiento de procesos psicológicos mediante el conocimiento y gestión de las emociones como eje central de la praxis.</p>
+            </div>
+            <div class="col">
+                <p>De entre las múltiples opciones de especialización terapéutica, me decanté por la <strong>Terapia Transpersonal</strong> (Escuela Española de Desarrollo Transpersonal, 2015) ya que vi a través de ella la posibilidad de facilitar la integración de procesos vitales y existenciales, con las áreas bio-psico-social de la persona.</p>
+                <p>Recientemente he finalizado un <strong>Máster en orientación educativa</strong> (UNIR, 2020) que me ha permitido profundizar en el desarrollo de técnicas de inclusión e innovación metodológica en el ámbito educativo.</p>
+                <p class="mb-4">He complementado esta base mediante la adquisición de <strong>herramientas específicas</strong> que me permitan ampliar el alcance del acompañamiento a la diversidad de situaciones de conflicto que las personas puedan presentar.</p>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid bg-c-green-light text-black mb-0">
+        <div class="container">
+            <p class="lead mb-0"><strong>Me he formado en coaching, mediación en drogodependencias, intervención psicopedagógica en entornos sociales y familiares, procesos de duelo, dificultades en el aprendizaje, desarrollo de competencias transversales, pensamiento crítico y actitud creativa, entre otras.</strong></p>
+        </div>
+    </div>
+    <div id="contact" class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/contact.jpg') | imagine_filter('2400xY') }}');background-size:cover;">
+        <div class="container p-5">
+            <h1 class="text-black mb-0">Contacto</h1>
+        </div>
+    </div>
 
     <div class="container mt-5 mb-5">
         <div class="row">

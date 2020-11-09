@@ -11,7 +11,7 @@
     <title>{% block title %}{{ front_main_title | capitalize }}{% endblock %}</title>
     {{ encore_entry_link_tags('app') }}
 </head>
-<body class="my-body" data-spy="scroll" data-target="#navbarSupportedContent" data-offset="90">
+<body class="my-body" data-spy="scroll" data-target="#navbarSupportedContent" data-offset="150">
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white with-border-bottom">
     <a href="{{ path('app_front_homepage') }}" class="navbar-brand">
         <img height="70" src="{{ asset('build/logo.jpg') }}" alt="{{ front_main_title | capitalize }} logo">
@@ -31,10 +31,10 @@
                 <a class="nav-link" href="#services">Servicios</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Trayectoria</a>
+                <a class="nav-link" href="#career">Trayectoria</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contacto</a>
+                <a class="nav-link" href="#contact">Contacto</a>
             </li>
         </ul>
     </div>

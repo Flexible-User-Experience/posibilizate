@@ -8,8 +8,6 @@ $green-light: #E6EEC3;
 $pb-custom-navbar-height: 90px;
 $navbar-height: $pb-custom-navbar-height;
 
-
-
 // fonts
 $icon-font-path: "/build/fonts/";
 $fa-font-path:   "/build/fonts";
@@ -66,4 +64,8 @@ footer.footer {
 
 body {
   padding-top: $pb-custom-navbar-height;
+}
+
+.navbar.with-border-bottom {
+  border-bottom: solid 1px $green-dark;
 }

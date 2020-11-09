@@ -20,7 +20,7 @@ class WebpageController extends AbstractController
        $form = $this->createForm(WebContactMessageType::class, $webContactMessage);
        $form->handleRequest($request);
        if ($form->isSubmitted() && $form->isValid()) {
-           $this->addFlash('success', 'Contact form sent successfully, we\'ll answer you as soon as possible.');
+           $this->addFlash('success', 'Formulario de consulta enviado con éxito, te responderemos lo antes posible.');
       //     $dispatcher = new EventDispatcher();
       //     $dispatcher->addSubscriber(new EmailNotificationsListener($ens));
       //     $event = new WebContactMessageFormSendedEvent($webContactMessage);

@@ -41,24 +41,6 @@
         {% endblock %}
     </div>
 </nav>
-{% if app.session.flashbag.peekAll | length > 0 %}
-    <div class="container">
-        {% for type, messages in app.session.flashbag.all %}
-            {% for message in messages %}
-                <div class="row">
-                    <div class="col-12">
-                        <div class="alert alert-{{ type }} alert-dismissible fade show mt-4 mb-4" role="alert">
-                            {{ message }}
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        {% endfor %}
-    </div>
-{% endif %}
 {% block body %}{% endblock %}
 <footer class="footer bg-secondary pt-3 pb-5">
     <div class="container">

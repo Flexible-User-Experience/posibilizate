@@ -35,19 +35,19 @@ $link-color: $brand-primary-color;
 
 // elements
 .text-brand-primary {
-  color: $brand-primary-color !important;
+  color: $brand-primary-color;
 }
 
 .text-brand-secondary {
-  color: $brand-secondary-color !important;
+  color: $brand-secondary-color;
 }
 
 .bg-brand-primary {
-  background-color: $brand-primary-color !important;
+  background-color: $brand-primary-color;
 }
 
 .bg-brand-secondary {
-  background-color: $brand-secondary-color !important;
+  background-color: $brand-secondary-color;
 }
 
 body {
@@ -59,12 +59,12 @@ body {
 }
 
 footer.footer {
-  color: white !important;
+  color: white;
   div.container {
     ul.list-inline {
       li.list-inline-item {
         a {
-          color: white !important;
+          color: white;
         }
       }
     }

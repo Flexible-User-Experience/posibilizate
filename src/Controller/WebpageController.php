@@ -44,4 +44,12 @@ class WebpageController extends AbstractController
   {
       return $this->render('webpage/privacy_policy.html.twig');
   }
+
+  /**
+   * @Route("/condiciones-legales", name="app_front_terms_and_conditions")
+   */
+  public function termsAndConditionsAction()
+  {
+      return $this->render('webpage/terms_and_conditions.html.twig');
+  }
 }

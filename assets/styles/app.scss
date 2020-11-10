@@ -17,6 +17,8 @@ $enable-responsive-font-sizes: true;
 $brand-primary-color: $green-dark;
 $brand-secondary-color: $green-light;
 $link-color: $brand-primary-color;
+$navbar-light-hover-color: $brand-secondary-color;
+$navbar-light-active-color: $brand-primary-color;
 
 // imports
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";

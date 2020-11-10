@@ -6,7 +6,7 @@ require('bootstrap');
 
 $(document).ready(function() {
     $('[data-toggle="popover"]').popover();
-    $('#sections-menu').bind('click', 'ul li a', function(event) {
+    $('#navbarSupportedContent').bind('click', 'ul li a', function(event) {
         event.preventDefault();
         $.scrollTo(event.target.hash, 250, {offset: -90});
     });

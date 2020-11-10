@@ -1,14 +1,14 @@
 {% extends "@email/zurb_2/notification/body.html.twig" %}
 
 {% block lead %}
-    <small><strong>{{ front_main_title }} NOTIFICACIÓN</strong></small>
-    <p class="lead">Consulta formulario web recibida</p>
+    <small><strong>NOTIFICACIÓN {{ front_main_title | upper }}</strong></small>
+    <p class="lead">Consulta formulario web enviada!</p>
 {% endblock %}
 
 {% block content %}
     <spacer size="16"></spacer>
     <p>
-        Hemos recibido una consulta a través de nuestro formulario web. En breve respondremos tu consulta, muchas gracias por tu atención.
+        Hemos recibido correctamente tu consulta a través de nuestro formulario web. En breve te responderemos, muchas gracias por tu atención.
     </p>
 {% endblock %}
 
@@ -17,5 +17,5 @@
 {% block exception %}{% endblock %}
 
 {% block footer_content %}
-    <p><small>Enviado por {{ admin_main_title }}</small></p>
+    <p><small>Enviado por {{ front_main_title | capitalize }}</small></p>
 {% endblock %}

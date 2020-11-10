@@ -32,7 +32,7 @@ class EmailNotificationsService
                 ->subject('Consulta formulario web '.$this->frontProjectTitle)
                 ->htmlTemplate('email_notifications/web_contact_message_form_sended_notification_to_admin_manager.html.twig')
                 ->context([
-                    'importance' => NotificationEmail::IMPORTANCE_MEDIUM,
+                    'importance' => NotificationEmail::IMPORTANCE_URGENT,
                     'web_contact_message' => $webContactMessage,
                 ])
             ;
@@ -56,7 +56,7 @@ class EmailNotificationsService
                 ->subject('Consulta en formulario web '.$this->frontProjectTitle.' recibida')
                 ->htmlTemplate('email_notifications/web_contact_message_form_answer_notification_to_sender.html.twig')
                 ->context([
-                    'importance' => NotificationEmail::IMPORTANCE_LOW,
+                    'importance' => NotificationEmail::IMPORTANCE_HIGH,
                     'web_contact_message' => $webContactMessage,
                 ])
             ;

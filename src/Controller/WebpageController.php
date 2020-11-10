@@ -30,7 +30,6 @@ class WebpageController extends AbstractController
        $form->handleRequest($request);
        if ($form->isSubmitted() && $form->isValid()) {
            $this->addFlash('success', 'Formulario de consulta enviado con éxito, te responderemos lo antes posible.');
-           $ens->sendWebContactMessageFormSendedNotificationToAdminManager($webContactMessage);
            $dispatcher = new EventDispatcher();
            $dispatcher->addSubscriber(new EmailNotificationsListener($ens));
            $event = new WebContactMessageFormSendedEvent($webContactMessage);
@@ -53,13 +52,5 @@ class WebpageController extends AbstractController
   public function privacyPolicyAction(): Response
   {
       return $this->render('webpage/privacy_policy.html.twig');
-  }
-
-  /**
-   * @Route("/condiciones-legales", name="app_front_terms_and_conditions")
-   */
-  public function termsAndConditionsAction(): Response
-  {
-      return $this->render('webpage/terms_and_conditions.html.twig');
   }
 }

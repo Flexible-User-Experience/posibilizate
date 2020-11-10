@@ -15,9 +15,14 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class WebpageController extends AbstractController
 {
-  /**
-   * @Route("/", name="app_front_homepage")
-   */
+    /**
+     * @Route("/", name="app_front_homepage")
+     *
+     * @param Request $request
+     * @param EmailNotificationsService $ens
+     *
+     * @return Response
+     */
   public function homepageAction(Request $request, EmailNotificationsService $ens): Response
   {
        $webContactMessage = new WebContactMessage();
@@ -25,6 +30,7 @@ class WebpageController extends AbstractController
        $form->handleRequest($request);
        if ($form->isSubmitted() && $form->isValid()) {
            $this->addFlash('success', 'Formulario de consulta enviado con éxito, te responderemos lo antes posible.');
+           $ens->sendWebContactMessageFormSendedNotificationToAdminManager($webContactMessage);
            $dispatcher = new EventDispatcher();
            $dispatcher->addSubscriber(new EmailNotificationsListener($ens));
            $event = new WebContactMessageFormSendedEvent($webContactMessage);

@@ -1,0 +1,28 @@
+{% extends "@email/zurb_2/notification/body.html.twig" %}
+
+{% block lead %}
+    <small><strong>{{ admin_main_title }} NOTIFICACIÓN</strong></small>
+    <p class="lead">Consulta formulario web recibida</p>
+{% endblock %}
+
+{% block content %}
+    <spacer size="16"></spacer>
+    <p>
+        Has rebicido una nueva consulta. Ahora la persona <strong>{{ web_contact_message.name }}</strong> con la dirección de correo electrónico <strong>{{ web_contact_message.email }}</strong> está esperando tu respuesta a la siguiente consulta:
+    </p>
+    <callout class="warning">
+        <p>
+            <strong>{{ web_contact_message.message }}</strong><br>
+        </p>
+    </callout>
+    <spacer size="16"></spacer>
+    <a href="mailto:{{ web_contact_message.email }}?subject=Respuesta consulta formulario web {{ admin_main_title }}" class="rounded">Responder</a>
+{% endblock %}
+
+{% block action %}{% endblock %}
+
+{% block exception %}{% endblock %}
+
+{% block footer_content %}
+    <p><small>Enviado por {{ admin_main_title }}</small></p>
+{% endblock %}

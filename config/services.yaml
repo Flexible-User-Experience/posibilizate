@@ -11,6 +11,9 @@ services:
     _defaults:
         autowire: true
         autoconfigure: true
+        bind:
+            $adminManagerEmail: '%mailer_destination%'
+            $frontProjectTitle: '%front_main_title%'
     App\:
         resource: '../src/'
         exclude:

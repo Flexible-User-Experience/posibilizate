@@ -29,6 +29,8 @@ class WebpageControllerTest extends WebTestCase
     {
         return [
             ['/'],
+            ['/blog/no-se-que-hacer-con-mi-vida'],
+            ['/blog/no-se-que-hacer-con-mi-vida/2021/01/15/la-duda-como-palanca-de-cambio'],
             ['/politica-de-privacidad'],
             ['/politica-de-cookies'],
         ];

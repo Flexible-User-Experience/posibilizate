@@ -53,4 +53,12 @@ class WebpageController extends AbstractController
   {
       return $this->render('webpage/privacy_policy.html.twig');
   }
+
+  /**
+   * @Route("/politica-de-cookies", name="app_front_cookies_policy")
+   */
+  public function cookiesPolicyAction(): Response
+  {
+      return $this->render('webpage/cookies_policy.html.twig');
+  }
 }

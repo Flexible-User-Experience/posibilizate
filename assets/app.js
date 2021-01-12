@@ -88,8 +88,10 @@ $(document).ready(function() {
     // Bootstrap init & scroll on click behaviour in some UI elements
     $('[data-toggle="popover"]').popover();
     $('#navbarSupportedContent').bind('click', 'ul li a', function(event) {
-        event.preventDefault();
-        $.scrollTo(event.target.hash, 250, {offset: -90});
+        if (event.target.hash) {
+            event.preventDefault();
+            $.scrollTo(event.target.hash, 250, {offset: -90});
+        }
     });
 });
 

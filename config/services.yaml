@@ -1,11 +1,26 @@
 parameters:
-    locale: '%env(string:DEFAULT_LOCALE)%'
+    locale:                    '%env(string:DEFAULT_LOCALE)%'
+    front_web_title:           '%env(string:PROJECT_WEB_TITLE)%'
+    front_web_phone:           '%env(string:PROJECT_WEB_PHONE)%'
+    front_web_address:         '%env(string:PROJECT_WEB_ADDRESS)%'
+    front_web_postal_code:     '%env(string:PROJECT_WEB_POSTAL_CODE)%'
+    front_web_city:            '%env(string:PROJECT_WEB_CITY)%'
+    front_web_province:        '%env(string:PROJECT_WEB_PROVINCE)%'
+    front_legal_id_tax_number: '%env(string:PROJECT_LEGAL_ID_TAX_NUMBER)%'
+    front_legal_name:          '%env(string:PROJECT_LEGAL_NAME)%'
+    front_legal_phone:         '%env(string:PROJECT_LEGAL_PHONE)%'
+    front_legal_email:         '%env(string:PROJECT_LEGAL_EMAIL)%'
+    front_legal_address:       '%env(string:PROJECT_LEGAL_ADDRESS)%'
+    front_legal_postal_code:   '%env(string:PROJECT_LEGAL_POSTAL_CODE)%'
+    front_legal_city:          '%env(string:PROJECT_LEGAL_CITY)%'
+    front_legal_province:      '%env(string:PROJECT_LEGAL_PROVINCE)%'
+    front_base_url:            '%env(string:PROJECT_BASE_URL)%'
     google_recaptcha_site_key: '%env(string:GOOGLE_RECAPTCHA_SITE_KEY)%'
-    front_main_title: '%env(string:PROJECT_WEB_TITLE)%'
-    google_analytics_enabled: '%env(bool:GOOGLE_ANALYTICS_IS_ENABLED)%'
-    google_analytics_code: '%env(string:GOOGLE_ANALYTICS_ACCOUNT)%'
-    mailer_destination: '%env(string:MAILER_DESTINATION)%'
-    delivery_dev_address: '%env(string:DEV_DELIVERY_ADDRESS)%'
+    google_analytics_enabled:  '%env(bool:GOOGLE_ANALYTICS_IS_ENABLED)%'
+    google_analytics_code:     '%env(string:GOOGLE_ANALYTICS_ACCOUNT)%'
+    mailer_destination:        '%env(string:MAILER_DESTINATION)%'
+    delivery_dev_address:      '%env(string:DEV_DELIVERY_ADDRESS)%'
+    app_cookie_session_name:   '_PSBLZT_SESSID'
 
 services:
     _defaults:
@@ -13,7 +28,7 @@ services:
         autoconfigure: true
         bind:
             $adminManagerEmail: '%mailer_destination%'
-            $frontProjectTitle: '%front_main_title%'
+            $frontProjectTitle: '%front_web_title%'
     App\:
         resource: '../src/'
         exclude:

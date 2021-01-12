@@ -1,7 +1,7 @@
 {% extends "@email/zurb_2/notification/body.html.twig" %}
 
 {% block lead %}
-    <small><strong>NOTIFICACIÓN {{ front_main_title | upper }}</strong></small>
+    <small><strong>NOTIFICACIÓN {{ front_web_title | upper }}</strong></small>
     <p class="lead">Consulta formulario web recibida!</p>
 {% endblock %}
 
@@ -16,7 +16,7 @@
         </p>
     </callout>
     <spacer size="16"></spacer>
-    <button href="mailto:{{ web_contact_message.email }}?subject=Respuesta consulta formulario web {{ front_main_title | capitalize }}" class="rounded">Responder</button>
+    <button href="mailto:{{ web_contact_message.email }}?subject=Respuesta consulta formulario web {{ front_web_title | capitalize }}" class="rounded">Responder</button>
 {% endblock %}
 
 {% block action %}{% endblock %}
@@ -24,5 +24,5 @@
 {% block exception %}{% endblock %}
 
 {% block footer_content %}
-    <p><small>Enviado por {{ front_main_title | capitalize }}</small></p>
+    <p><small>Enviado por {{ front_web_title | capitalize }}</small></p>
 {% endblock %}

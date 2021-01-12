@@ -3,7 +3,7 @@
 {% block body %}
     <div id="home" class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/home.png') | imagine_filter('2400xY') }}');background-size:cover;">
         <div class="container p-5">
-            <h1 class="display-1 text-white">{{ front_main_title | capitalize }}</h1>
+            <h1 class="display-1 text-white">{{ front_web_title | capitalize }}</h1>
             <h2 class="display-4 text-white mb-0">Asesoría y Consultoría Psicológica</h2>
         </div>
     </div>
@@ -28,7 +28,7 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                     <div class="card text-center c-green-dark border-light">
-                        <img src="{{ asset('build/step.jpg') | imagine_filter('600xY') }}" class="card-img" alt="{{ front_main_title | capitalize }} foto principal">
+                        <img src="{{ asset('build/step.jpg') | imagine_filter('600xY') }}" class="card-img" alt="{{ front_web_title | capitalize }} foto principal">
                         <div class="card-img-overlay">
                             <h5 class="card-title p-3" style="background-color:rgba(255, 255, 255, 0.85);">Te propongo dar hoy el primer paso <i class="fas fa-walking"></i></h5>
                         </div>

@@ -11,7 +11,9 @@
     <title>{{ front_web_title | capitalize }}{% block title %} · Asesoría y Consultoría Psicológica{% endblock %}</title>
     {{ encore_entry_link_tags('app') }}
 </head>
-<body class="my-body" data-spy="scroll" data-target="#navbarSupportedContent" data-offset="110">
+<body id="app-body" class="my-body" data-spy="scroll" data-target="#navbarSupportedContent" data-offset="110" data-app-gtm="{{ google_analytics_code }}" data-app-cookie-consent="{{ constant('App\\Enum\\CookieConsentNamesEnum::COOKIE_CONSENT') }}" data-app-cookie-consent-gtm="{{ constant('App\\Enum\\CookieConsentNamesEnum::COOKIE_CONSENT_GTM') }}">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ google_analytics_code }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+{% include 'webpage/cookies_consent_modal.html.twig' %}
 <nav id="sections-menu" class="navbar fixed-top navbar-expand-lg navbar-light bg-white with-border-bottom">
     <a href="{{ path('app_front_homepage') }}" class="navbar-brand">
         <img height="70" src="{{ asset('build/logo.jpg') }}" alt="{{ front_web_title | capitalize }} logo">
@@ -64,8 +66,8 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-2">
-                <strong>Marta Iglesias Ojeda</strong><br>
-                <i class="fas fa-phone-square"></i> <a class="text-reset" href="tel:+34655768647">655 768 647</a><br>
+                <strong>{{ front_legal_name }}</strong><br>
+                <i class="fas fa-phone-square"></i> <a class="text-reset" href="tel:+34{{ front_web_phone | replace({' ': ''}) }}">{{ front_web_phone }}</a><br>
                 <i class="fas fa-envelope-square"></i> <a class="text-reset" href="mailto:{{ mailer_destination }}">{{ mailer_destination }}</a>
             </div>
             <div class="col-sm-10 text-right">

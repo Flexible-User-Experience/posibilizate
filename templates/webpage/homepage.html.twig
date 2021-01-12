@@ -171,7 +171,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <img src="{{ asset('build/me.jpg') | imagine_filter('1200xY') }}" class="img-fluid mb-4" alt="Marta Iglesias psicóloga">
+                    <img src="{{ asset('build/me.jpg') | imagine_filter('1200xY') }}" class="img-fluid mb-4" alt="{{ front_legal_name }} psicóloga">
                 </div>
             </div>
             <div class="row">
@@ -216,9 +216,9 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h5>Marta Iglesias Ojeda</h5>
+                    <h5>{{ front_legal_name }}</h5>
                     <p class="lead">
-                        <i class="fas fa-phone-square"></i> <a href="tel:+34655768647">655 768 647</a><br>
+                        <i class="fas fa-phone-square"></i> <a href="tel:+34{{ front_web_phone | replace({' ': ''}) }}">{{ front_web_phone }}</a><br>
                         <i class="fas fa-envelope-square"></i> <a href="mailto:{{ mailer_destination }}">{{ mailer_destination }}</a>
                     </p>
                     <img src="{{ asset('build/contact.jpg') | imagine_filter('600xY') }}" class="img-fluid mb-4" alt="Imagen sobre contacto">

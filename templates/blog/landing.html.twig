@@ -2,12 +2,21 @@
 
 {% block title %} · No sé que hacer con mi vida · Blog{% endblock %}
 
-{% block menu %}{% endblock %}
+{% block menu %}
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ path('app_front_homepage') }}">{{ front_web_title | capitalize }}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn btn-outline-secondary ml-2" href="{{ path('app_front_blog_landing') }}">Blog</a>
+        </li>
+    </ul>
+{% endblock %}
 
 {% block body %}
     <div id="home" class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/legals.png') | imagine_filter('2400xY') }}');background-size:cover;">
         <div class="container py-5">
-            <h1 class="text-white">Blog</h1>
+            <h1 class="text-white">No sé que hacer con mi vida</h1>
         </div>
     </div>
     <div class="jumbotron jumbotron-fluid bg-white mb-0">

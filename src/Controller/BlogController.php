@@ -19,7 +19,7 @@ class BlogController extends AbstractController
         $posts = $bpr->findUpTodayAvailableSortedByPublishedDateAndName()->getQuery()->getResult();
 
         return $this->render(
-            'blog/landing.html.twig',
+            'blog/posts_landing.html.twig',
             [
                 'posts' => $posts,
             ]

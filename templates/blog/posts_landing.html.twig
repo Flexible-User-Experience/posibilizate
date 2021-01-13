@@ -1,0 +1,80 @@
+{% extends "webpage/base.html.twig" %}
+
+{% block title %} · No sé que hacer con mi vida · Blog{% endblock %}
+
+{% block menu %}
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ path('app_front_homepage') }}">{{ front_web_title | capitalize }}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn btn-outline-secondary ml-2" href="{{ path('app_front_blog_landing') }}">Blog</a>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block body %}
+    <div id="home" class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/lighthouse.png') | imagine_filter('2400xY') }}');background-size:cover;">
+        <div class="container py-5">
+            <h1 class="text-white">No sé que hacer con mi vida</h1>
+            <h2 class="text-secondary mb-0">Blog</h2>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid bg-white mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-10">
+                    <p class="lead">
+                        El COVID-19 ha roto todo esquema, toda previsión existente. Se ha vivido un lapso de tiempo en el que la nada, lo ha sido todo. Más presente que nunca, el pasado no ha importado y el futuro se ha diluido en su intento de existir. Resbala. Se evapora minuto a minuto. ¿Cómo orientarse en este efímero contexto? ¿Qué decisiones tomar en una sociedad tan líquida y efervescente? ¿Hacia dónde dirigir nuestros pasos?
+                    </p>
+                    <p class="lead">
+                        Tenemos tantas posibilidades a nuestro alcance y a la vez tan poca certeza sobre cuál de ellas va a resultar la más acertada para nosotros y nuestro bienestar, que con frecuencia tenemos la sensación de que no sabemos qué hacer con nuestra vida ni qué dirección tomar. Sentimos un vacío existencial caracterizado por la presencia de emociones y pensamientos relacionados con el miedo, la tensión, la indecisión, la ansiedad incluso la frustración o la  culpa de los que nos resulta difícil salir. Ello genera un gran dolor. Si éste se prolonga en el tiempo, puede acabar desencadenando en una patología que afecte a nuestro correcto desempeño vital. Por ello ponernos manos a la obra es un elemento que no sólo nos va a generar un mayor grado de bienestar y seguridad en el complejo devenir sinó que además va a suponer una llave de protección y prevención.
+                    </p>
+                    <p class="lead">
+                        El análisis no científico de historias vitales ha indicado que, las personas que han sido capaces de reconstruir de manera constante sus proyectos vitales para dar respuesta al cambio constante de la sociedad, han salido fortalecidas de éstas circunstancias a priori, adversas. ¿Cómo lo han hecho?
+                    </p>
+                    <p class="lead">
+                        Como psicóloga, coach y terapeuta <strong>pongo a tu disposición elementos que pueden facilitarte ese camino de reconstrucción</strong> constante para que, de ésta manera te conviertas en el artista de tu propia vida y puedas crear y disfrutar de esos escenarios que llevas tiempo imaginando.
+                    </p>
+                    <p class="lead">
+                        Para ello, además de la <a href="{{ path('app_front_homepage') }}#services">asesoría individual</a>, pongo a tu disposición este blog en el que de manera mensual se abordarán diferentes contenidos relacionados con la búsqueda del sentido vital. Si no sabes qué hacer con tu vida, posibilizate.
+                        {# TODO add CTA to newsletter subscription #}
+                    </p>
+                </div>
+                <div class="col-12 col-sm-2">
+                    <div class="alert alert-primary" role="alert">
+                        <i class="fas fa-info-circle"></i> Puedes seguir en contacto con nosotros y mantenerte informado cada vez que publiquemos un artículo nuevo en nuestro blog subscribiéndote a nuestra newsletter.
+                    </div>
+                    <a href="mailto:{{ mailer_destination }}?subject=Quiero+recibir+vuestro+newsletter+{{ front_base_url }}" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> Subscríbete al newsletter</a>
+                </div>
+            </div>
+            {% if posts | length > 0 %}
+                <div class="row mt-5">
+                    {% for post in posts %}
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="{{ vich_uploader_asset(post, 'imageFile') | imagine_filter('800x600') }}" class="card-img-top" alt="{{ post.name }} foto">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ post.name }}</h5>
+                                    <p class="card-text">{{ post.shortDescription}}</p>
+                                    <a href="{{ path('app_front_blog_post_detail', {year: post.published | date('Y'), month: post.published | date('m'), day: post.published | date('d'), slug: post.slug}) }}" class="btn btn-primary"><i class="fas fa-book-reader"></i> Leer más</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted"><i class="fas fa-calendar-alt"></i> {{ post.published | date('d/m/Y') }}</small>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="row mt-5">
+                    <div class="col">
+                        <div class="alert alert-warning mb-0" role="alert">
+                            <i class="fas fa-exclamation-triangle"></i> No existen artículos pendientes de publicar.
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

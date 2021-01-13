@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block body %}
-    <div id="home" class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/legals.png') | imagine_filter('2400xY') }}');background-size:cover;">
+    <div id="home" class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/lighthouse.png') | imagine_filter('2400xY') }}');background-size:cover;">
         <div class="container py-5">
             <h1 class="text-white">No sé que hacer con mi vida</h1>
             <h2 class="text-secondary mb-0">Blog</h2>
@@ -22,19 +22,7 @@
     </div>
     <div class="jumbotron jumbotron-fluid bg-white mb-0">
         <div class="container">
-            {% if posts | length > 0 %}
-
-            {% else %}
-                <div class="row">
-                    <div class="col">
-                        <div class="alert alert-warning" role="alert">
-                            <i class="fas fa-exclamation-triangle"></i> No existen artículos pendientes de publicar.
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
             <div class="row">
-
                 <div class="col">
                     <p>
                         El COVID-19 ha roto todo esquema, toda previsión existente. Se ha vivido un lapso de tiempo en el que la nada, lo ha sido todo. Más presente que nunca, el pasado no ha importado y el futuro se ha diluido en su intento de existir. Resbala. Se evapora minuto a minuto. ¿Cómo orientarse en este efímero contexto? ¿Qué decisiones tomar en una sociedad tan líquida y efervescente? ¿Hacia dónde dirigir nuestros pasos?
@@ -54,6 +42,33 @@
                     </p>
                 </div>
             </div>
+            {% if posts | length > 0 %}
+                <div class="row mt-3">
+                    {% for post in posts %}
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="...{# TODO set image #}" class="card-img-top" alt="{{ post.name }} foto">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ post.name }}</h5>
+                                    <p class="card-text">{{ post.shortDescription}}</p>
+                                    <a href="{{ path('app_front_blog_post_detail', {year: post.published | date('Y'), month: post.published | date('m'), day: post.published | date('d'), slug: post.slug}) }}" class="btn btn-primary"><i class="fas fa-book-reader"></i> Leer más</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted"><i class="fas fa-calendar-alt"></i> {{ post.published | date('d/m/Y') }}</small>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="row mt-5">
+                    <div class="col">
+                        <div class="alert alert-warning mb-0" role="alert">
+                            <i class="fas fa-exclamation-triangle"></i> No existen artículos pendientes de publicar.
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
         </div>
     </div>
 {% endblock %}

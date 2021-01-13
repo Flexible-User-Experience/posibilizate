@@ -3,8 +3,9 @@
 namespace App\Controller;
 
 use App\Repository\BlogPostRepository;
+use DateTime;
+use DateTimeImmutable;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -26,14 +27,29 @@ class BlogController extends AbstractController
     }
 
     /**
-     * @Route("/blog/no-se-que-hacer-con-mi-vida/2021/01/15/la-duda-como-palanca-de-cambio", name="app_front_blog_first_post")
-     *
-     * @param Request $request
-     *
-     * @return Response
+     * @Route("/blog/no-se-que-hacer-con-mi-vida/{year}/{month}/{day}/{slug}", name="app_front_blog_post_detail")
      */
-    public function blogFirstPostAction(Request $request): Response
+    public function blogFirstPostAction(string $year, string $month, string $day, string $slug, BlogPostRepository $bpr): Response
     {
-        return $this->render('blog/first_post.html.twig');
+        $published = new DateTime();
+        $published->setDate((int) $year, (int) $month, (int) $day);
+        $post = $bpr->findByPublishedAndSlug($published, $slug)->getQuery()->getOneOrNullResult();
+        if (!$post) {
+            throw $this->createNotFoundException();
+        }
+        $today = new DateTimeImmutable();
+        if ($today->format('Y-m-d') < $published->format('Y-m-d')) {
+            throw $this->createNotFoundException();
+        }
+        if (!$post->isAvailable()) {
+            throw $this->createAccessDeniedException();
+        }
+
+        return $this->render(
+            'blog/post_detail.html.twig',
+            [
+                'post' => $post,
+            ]
+        );
     }
 }

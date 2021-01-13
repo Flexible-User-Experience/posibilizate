@@ -29,7 +29,7 @@
                 <div class="col col-md-6 col-lg-7 col-xl-8">
                     <h2 class="mb-0">{{ post.name }}</h2>
                     <h5 class="mb-3"><small class="text-muted"><i class="fas fa-calendar-alt"></i> {{ post.published | date('d/m/Y') }}</small></h5>
-                    <p class="lead">{{ post.description | raw }}</p>
+                    {{ post.description | raw }}
                 </div>
             </div>
             <div class="row mt-5">

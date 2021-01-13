@@ -53,7 +53,9 @@
                     {% for post in posts %}
                         <div class="col-4">
                             <div class="card">
-                                <img src="{{ vich_uploader_asset(post, 'imageFile') | imagine_filter('800x600') }}" class="card-img-top" alt="{{ post.name }} foto">
+                                <a href="{{ path('app_front_blog_post_detail', {year: post.published | date('Y'), month: post.published | date('m'), day: post.published | date('d'), slug: post.slug}) }}">
+                                    <img src="{{ vich_uploader_asset(post, 'imageFile') | imagine_filter('800x600') }}" class="card-img-top" alt="{{ post.name }} foto">
+                                </a>
                                 <div class="card-body">
                                     <h5 class="card-title">{{ post.name }}</h5>
                                     <p class="card-text">{{ post.shortDescription}}</p>

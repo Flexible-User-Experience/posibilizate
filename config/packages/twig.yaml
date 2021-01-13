@@ -25,6 +25,7 @@ twig:
         front_base_url:            '%front_base_url%'
         google_analytics_enabled:  '%google_analytics_enabled%'
         google_analytics_code:     '%google_analytics_code%'
+        google_tag_manager_code:   '%google_tag_manager%'
         mailer_destination:        '%mailer_destination%'
         app_cookie_session_name:   '%app_cookie_session_name%'
         enable_cookies_consent:    true

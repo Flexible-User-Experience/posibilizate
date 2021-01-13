@@ -23,7 +23,7 @@
     <div class="jumbotron jumbotron-fluid bg-white mb-0">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-10">
+                <div class="col-12 col-sm-9 col-md-10">
                     <p class="lead">
                         El COVID-19 ha roto todo esquema, toda previsión existente. Se ha vivido un lapso de tiempo en el que la nada, lo ha sido todo. Más presente que nunca, el pasado no ha importado y el futuro se ha diluido en su intento de existir. Resbala. Se evapora minuto a minuto. ¿Cómo orientarse en este efímero contexto? ¿Qué decisiones tomar en una sociedad tan líquida y efervescente? ¿Hacia dónde dirigir nuestros pasos?
                     </p>
@@ -41,7 +41,7 @@
                         {# TODO add CTA to newsletter subscription #}
                     </p>
                 </div>
-                <div class="col-12 col-sm-2">
+                <div class="col-12 col-sm-3 col-md-2">
                     <div class="alert alert-primary" role="alert">
                         <i class="fas fa-info-circle"></i> Puedes seguir en contacto con nosotros y mantenerte informado cada vez que publiquemos un artículo nuevo en nuestro blog subscribiéndote a nuestra newsletter.
                     </div>
@@ -51,8 +51,8 @@
             {% if posts | length > 0 %}
                 <div class="row mt-5">
                     {% for post in posts %}
-                        <div class="col-4">
-                            <div class="card">
+                        <div class="col col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                            <div class="card mb-3">
                                 <a href="{{ path('app_front_blog_post_detail', {year: post.published | date('Y'), month: post.published | date('m'), day: post.published | date('d'), slug: post.slug}) }}">
                                     <img src="{{ vich_uploader_asset(post, 'imageFile') | imagine_filter('800x600') }}" class="card-img-top" alt="{{ post.name }} foto">
                                 </a>

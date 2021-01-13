@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\BlogPostRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -11,14 +12,17 @@ class BlogController extends AbstractController
 {
     /**
      * @Route("/blog/no-se-que-hacer-con-mi-vida", name="app_front_blog_landing")
-     *
-     * @param Request $request
-     *
-     * @return Response
      */
-    public function blogLandingAction(Request $request): Response
+    public function blogLandingAction(BlogPostRepository $bpr): Response
     {
-        return $this->render('blog/landing.html.twig');
+        $posts = $bpr->findUpTodayAvailableSortedByPublishedDateAndName()->getQuery()->getResult();
+
+        return $this->render(
+            'blog/landing.html.twig',
+            [
+                'posts' => $posts,
+            ]
+        );
     }
 
     /**

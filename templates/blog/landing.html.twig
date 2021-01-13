@@ -22,7 +22,19 @@
     </div>
     <div class="jumbotron jumbotron-fluid bg-white mb-0">
         <div class="container">
+            {% if posts | length > 0 %}
+
+            {% else %}
+                <div class="row">
+                    <div class="col">
+                        <div class="alert alert-warning" role="alert">
+                            <i class="fas fa-exclamation-triangle"></i> No existen artículos pendientes de publicar.
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
             <div class="row">
+
                 <div class="col">
                     <p>
                         El COVID-19 ha roto todo esquema, toda previsión existente. Se ha vivido un lapso de tiempo en el que la nada, lo ha sido todo. Más presente que nunca, el pasado no ha importado y el futuro se ha diluido en su intento de existir. Resbala. Se evapora minuto a minuto. ¿Cómo orientarse en este efímero contexto? ¿Qué decisiones tomar en una sociedad tan líquida y efervescente? ¿Hacia dónde dirigir nuestros pasos?
@@ -38,6 +50,7 @@
                     </p>
                     <p>
                         Para ello,además de la asesoría individual, pongo a tu disposición este blog en el que de manera mensual se abordarán diferentes contenidos relacionados con la búsqueda del sentido vital. Si no sabes qué hacer con tu vida, posibilizate.
+                        {# TODO add CTA to newsletter subscription #}
                     </p>
                 </div>
             </div>

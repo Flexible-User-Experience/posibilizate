@@ -23,10 +23,10 @@
     <div class="jumbotron jumbotron-fluid bg-white mb-0">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-5 col-lg-4 col-xl-3">
+                <div class="col-12 col-lg-4">
                     <img src="{{ vich_uploader_asset(post, 'imageFile') | imagine_filter('800x600') }}" class="img-fluid" alt="{{ post.name }} foto">
                 </div>
-                <div class="col-12 col-md-7 col-lg-8 col-xl-9">
+                <div class="col-12 col-lg-8">
                     <h2 class="mb-0">{{ post.name }}</h2>
                     <h5 class="mb-3"><small class="text-muted"><i class="fas fa-calendar-alt"></i> {{ post.published | date('d/m/Y') }}</small></h5>
                     {{ post.description | raw }}

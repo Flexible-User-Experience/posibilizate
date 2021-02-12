@@ -7,22 +7,18 @@ use Exception;
 use Symfony\Component\HttpFoundation\File\File;
 
 /**
- * Trait ImageAttributesTrait
+ * Trait ImageAttributesTrait.
  */
 trait ImageAttributesTrait
 {
-    /**
-     * @return File|null
-     */
     public function getImageFile(): ?File
     {
         return $this->imageFile;
     }
 
     /**
-     * @param File|null $imageFile
-     *
      * @return $this
+     *
      * @throws Exception
      */
     public function setImageFile(?File $imageFile): self
@@ -37,17 +33,12 @@ trait ImageAttributesTrait
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getImageName(): ?string
     {
         return $this->imageName;
     }
 
     /**
-     * @param string|null $imageName
-     *
      * @return $this
      */
     public function setImageName(?string $imageName): self
@@ -57,17 +48,12 @@ trait ImageAttributesTrait
         return $this;
     }
 
-    /**
-     * @return int|null
-     */
     public function getImageSize(): ?int
     {
         return $this->imageSize;
     }
 
     /**
-     * @param int|null $imageSize
-     *
      * @return $this
      */
     public function setImageSize(?int $imageSize): self

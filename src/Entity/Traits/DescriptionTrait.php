@@ -3,21 +3,16 @@
 namespace App\Entity\Traits;
 
 /**
- * Trait DescriptionTrait
+ * Trait DescriptionTrait.
  */
 trait DescriptionTrait
 {
-    /**
-     * @return string|null
-     */
     public function getDescription(): ?string
     {
         return $this->description;
     }
 
     /**
-     * @param string|null $description
-     *
      * @return $this
      */
     public function setDescription(?string $description): self

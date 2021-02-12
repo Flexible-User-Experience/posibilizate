@@ -17,7 +17,9 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  */
 class BlogCategory extends AbstractEntity
 {
-    use NameTrait, SlugTrait, IsAvailableTrait;
+    use NameTrait;
+    use SlugTrait;
+    use IsAvailableTrait;
 
     /**
      * @ORM\Column(type="string", length=255, unique=true)
@@ -54,17 +56,12 @@ class BlogCategory extends AbstractEntity
         $this->posts = new ArrayCollection();
     }
 
-    /**
-     * @return Collection
-     */
     public function getPosts(): Collection
     {
         return $this->posts;
     }
 
     /**
-     * @param BlogPost $post
-     *
      * @return $this
      */
     public function addPost(BlogPost $post): self
@@ -77,8 +74,6 @@ class BlogCategory extends AbstractEntity
     }
 
     /**
-     * @param BlogPost $post
-     *
      * @return $this
      */
     public function removePost(BlogPost $post): self
@@ -90,9 +85,6 @@ class BlogCategory extends AbstractEntity
         return $this;
     }
 
-    /**
-     * @return string
-     */
     public function __toString(): string
     {
         return $this->id ? $this->getName() : '---';

@@ -24,7 +24,12 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  */
 class BlogPost extends AbstractEntity
 {
-    use NameTrait, SlugTrait, ImageAttributesTrait, ShortDescriptionTrait, DescriptionTrait, IsAvailableTrait;
+    use NameTrait;
+    use SlugTrait;
+    use ImageAttributesTrait;
+    use ShortDescriptionTrait;
+    use DescriptionTrait;
+    use IsAvailableTrait;
 
     /**
      * @ORM\Column(type="string", length=255, unique=true)
@@ -65,7 +70,7 @@ class BlogPost extends AbstractEntity
     /**
      * @ORM\Column(type="integer", nullable=true)
      *
-     * @var integer
+     * @var int
      */
     private $imageSize;
 
@@ -110,17 +115,12 @@ class BlogPost extends AbstractEntity
         $this->tags = new ArrayCollection();
     }
 
-    /**
-     * @return DateTime|null
-     */
     public function getPublished(): ?DateTime
     {
         return $this->published;
     }
 
     /**
-     * @param DateTime|null $published
-     *
      * @return $this|null
      */
     public function setPublished(?DateTime $published): self
@@ -130,17 +130,12 @@ class BlogPost extends AbstractEntity
         return $this;
     }
 
-    /**
-     * @return Collection
-     */
     public function getTags(): Collection
     {
         return $this->tags;
     }
 
     /**
-     * @param BlogCategory $category
-     *
      * @return $this
      */
     public function addTag(BlogCategory $category): self
@@ -153,8 +148,6 @@ class BlogPost extends AbstractEntity
     }
 
     /**
-     * @param BlogCategory $category
-     *
      * @return $this
      */
     public function removeTag(BlogCategory $category): self
@@ -166,9 +159,6 @@ class BlogPost extends AbstractEntity
         return $this;
     }
 
-    /**
-     * @return string
-     */
     public function __toString(): string
     {
         return $this->id ? $this->getName() : '---';

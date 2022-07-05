@@ -46,9 +46,7 @@ class WebContactMessageType extends AbstractType
                     'constraints' => [
                         new Assert\NotBlank(),
                         new Assert\Email([
-                            'strict' => true,
-                            'checkMX' => true,
-                            'checkHost' => true,
+                            'mode' => 'strict',
                         ]),
                     ],
                 ]

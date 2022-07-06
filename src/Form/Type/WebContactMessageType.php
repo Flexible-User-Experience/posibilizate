@@ -4,7 +4,7 @@ namespace App\Form\Type;
 
 use App\Model\WebContactMessage;
 use EWZ\Bundle\RecaptchaBundle\Form\Type\EWZRecaptchaV3Type;
-use EWZ\Bundle\RecaptchaBundle\Validator\Constraints\IsTrueV3 as RecaptchaTrue;
+use EWZ\Bundle\RecaptchaBundle\Validator\Constraints\IsTrueV3;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -80,10 +80,10 @@ class WebContactMessageType extends AbstractType
                 EWZRecaptchaV3Type::class,
                 [
                     'label' => false,
-                    'action_name' => 'contact_homepage',
                     'mapped' => false,
+                    'action_name' => 'contact_homepage',
                     'constraints' => [
-                        new RecaptchaTrue(),
+                        new IsTrueV3(),
                     ],
                 ]
             )

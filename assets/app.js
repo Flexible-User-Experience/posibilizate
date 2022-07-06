@@ -94,9 +94,9 @@ $(document).ready(function() {
         }
     });
     // Move to flash messages
-    const errorNode = $('.alert-danger');
-    const envelopeNode = $('.fa-thumbs-up');
-    const exclamationTriangleNode = $('.fa-exclamation-triangle');
+    let errorNode = $('.alert-danger');
+    let envelopeNode = $('.fa-thumbs-up');
+    let exclamationTriangleNode = $('.fa-exclamation-triangle');
     moveToNode(errorNode);
     moveToNode(envelopeNode);
     moveToNode(exclamationTriangleNode);

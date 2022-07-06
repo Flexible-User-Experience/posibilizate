@@ -93,6 +93,13 @@ $(document).ready(function() {
             $.scrollTo(event.target.hash, 250, {offset: -90});
         }
     });
+    // Move to flash messages
+    const errorNode = $('.alert-danger');
+    const envelopeNode = $('.fa-thumbs-up');
+    const exclamationTriangleNode = $('.fa-exclamation-triangle');
+    moveToNode(errorNode);
+    moveToNode(envelopeNode);
+    moveToNode(exclamationTriangleNode);
 });
 
 function addGtmDynamicScript(googleTagManagerId) {
@@ -106,4 +113,10 @@ function addGtmDynamicScript(googleTagManagerId) {
         "})(window,document,'script','dataLayer','"+googleTagManagerId+"');");
     gtmScriptToAdd.appendChild(gtmScriptTextNode);
     document.head.appendChild(gtmScriptToAdd);
+}
+
+function moveToNode(node) {
+    if (node.length > 0) {
+        $('html,body').animate({scrollTop: node.offset().top - 100}, 'slow');
+    }
 }
